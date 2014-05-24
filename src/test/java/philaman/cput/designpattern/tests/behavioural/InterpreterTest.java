@@ -29,9 +29,9 @@ public class InterpreterTest {
         Assert.assertTrue(isMale.interpret("John"));
 
         Expression julia = new TerminalExpression("Julia");
-        Expression married = new TerminalExpression("Married");
-        Expression iMarriedWomen = new AndExpression(julia, married);
-        Assert.assertTrue(iMarriedWomen.interpret("Julia"));
+        Expression married = new TerminalExpression("is Married");
+        Expression isMarriedWomen = new AndExpression(julia, married);
+        Assert.assertTrue(isMarriedWomen.interpret("Julia is Married"));
 
        
     }
